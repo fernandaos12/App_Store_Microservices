@@ -7,6 +7,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var connectionString = builder.Configuration("MySqlConnection:MySqlConnectionString");
+builder.Services.AddDbContext<MySqlContext>(options=>options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0,29))));
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c=> c.SwaggerDoc("v1", new OpenApiInfo{Title = "GeekShopping.ProductApi"}));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
