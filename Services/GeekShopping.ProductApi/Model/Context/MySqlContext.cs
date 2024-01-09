@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace GeekShopping.ProductApi.Model.Context
 {
@@ -13,5 +10,8 @@ namespace GeekShopping.ProductApi.Model.Context
         public MySqlContext(DbContextOptions<MySqlContext> options) : base(options)
         {            
         }
+
+        //dotnet ef migrations add-migration AddProductDatatableOnDB
+        public DbSet<Product> Products {get; set;}
     }
 }
