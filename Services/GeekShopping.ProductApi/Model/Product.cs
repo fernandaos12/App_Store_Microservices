@@ -10,7 +10,12 @@ namespace GeekShopping.ProductApi.Model
         [Column("DESCRIPTION")]
         [Required]
         [StringLength(200)]
-        public string Description { get; set; }
+        public string Description { get; set; }  
+        
+        [Column("NAME")]
+        [Required]
+        [StringLength(200)]
+        public string Name { get; set; }
 
         [Column("PRICE")]
         [Required]

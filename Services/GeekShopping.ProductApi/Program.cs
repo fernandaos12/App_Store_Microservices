@@ -1,4 +1,7 @@
+using AutoMapper;
+using GeekShopping.ProductApi.Config;
 using GeekShopping.ProductApi.Model.Context;
+using GeekShopping.ProductApi.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -20,6 +23,11 @@ internal class Program
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "GeekShopping.ProductApi" }));
+
+        IMapper mapper = MapConfig.RegisterMaps().CreateMapper();
+        builder.Services.AddSingleton(mapper);
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
         var app = builder.Build();
 
