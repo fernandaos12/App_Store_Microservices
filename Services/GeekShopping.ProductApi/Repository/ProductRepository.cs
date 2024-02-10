@@ -67,5 +67,10 @@ namespace GeekShopping.ProductApi.Repository
             await _context.SaveChangesAsync();
             return _mapper.Map<ProductVO>(product);
         }
+
+        Task<ProductVO> IProductRepository.Delete(long id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
