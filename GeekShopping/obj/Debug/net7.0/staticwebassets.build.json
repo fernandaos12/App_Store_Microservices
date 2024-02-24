@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "0haTTe2Yg+8P9dLfLHXTOJDva+0KOKVJuhRymj0umZY=",
+  "Hash": "QRaRlHSlrMm7BMm6kdiTpR92wZy/HRMq4ezjA3qYPEk=",
   "Source": "GeekShopping",
   "BasePath": "_content/GeekShopping",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\microservices\\Services\\GeekShopping.ProductApi\\GeekShopping.ProductApi.csproj",
+      "Version": 2,
+      "Source": "GeekShopping.ProductApi",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
   "DiscoveryPatterns": [
     {
       "Name": "GeekShopping\\wwwroot",

@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping", "GeekShopping\GeekShopping.csproj", "{DE2E19E0-B272-46F3-8F00-E8D7E5E9E6B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6FAD75FC-D4AA-46DF-ACB8-3C05BC1A0191}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28C8AC1A-025B-4B67-A779-22F401231070} = {6FAD75FC-D4AA-46DF-ACB8-3C05BC1A0191}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6937C818-9D93-43B3-8DA1-0D23C6F5E4B0}
 	EndGlobalSection
 EndGlobal

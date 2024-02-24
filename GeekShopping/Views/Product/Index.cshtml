@@ -1,0 +1,18 @@
+﻿@model IEnumerable<GeekShopping.Models.ProductModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Product List</h1>
+        </div>
+        <div class="col text-end pt-1">
+            <a asp-action="ProductCreate" class="btn btn-outline-primary">
+                <i class="fa fas-plus"/><i>Create new Product
+            </a>
+        </div>
+    </div>
+</div>
