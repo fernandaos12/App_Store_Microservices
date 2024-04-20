@@ -1,14 +1,21 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GeekShoppingWeb.Models.Services.IServices;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeekShoppingWeb.Controllers
 {
     public class ProductController : Controller
     {
-        // GET: ProductController
-        public ActionResult Index()
+        private readonly IProductService _productservice;
+        public ProductController(IProductService productService)
         {
-            return View();
+            _productservice = productService ?? throw new ArgumentException("Something wrong with acess products base.");
+        }
+        // GET: ProductController
+        public async Task<ActionResult> Index()
+        {
+            var products = await _productservice.FindAllProducts();
+            return View(products);
         }
 
         // GET: ProductController/Details/5

@@ -9,7 +9,7 @@ namespace GeekShoppingWeb.Models.Services
     public class ProductService : IProductService
     {
         private readonly HttpClient _client;
-        public const string BasePath = "api/v1/product";
+        public const string BasePath = "api/Product";
 
         public ProductService(HttpClient client)
         {
@@ -24,7 +24,7 @@ namespace GeekShoppingWeb.Models.Services
             }
             else
             {
-                throw new Exception("Something went wrong");
+                throw new Exception("Something went wrong when create products");
             }
         }
 
@@ -42,7 +42,8 @@ namespace GeekShoppingWeb.Models.Services
 
         public async Task<ProductModel> FindProductById(long id)
         {
-            throw new NotImplementedException();
+            var response = await _client.GetAsync($"{BasePath}/{id}");
+            return await response.ReadContentAs<ProductModel>();
         }
 
         public Task<ProductModel> UpdateProduct(ProductModel model)
