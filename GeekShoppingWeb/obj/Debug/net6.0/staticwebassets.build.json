@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fuwf9SE98GPNSVbOtsiDTP8S8PZUz0lLamTfbHxQhWU=",
+  "Hash": "naCE1GGrnX+6b9ua7vGHPWGivO05JQ1phD/hpi8WpGw=",
   "Source": "GeekShoppingWeb",
   "BasePath": "_content/GeekShoppingWeb",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\microservices\\App\\App_Store_Microservices\\GeekShoppingWeb\\wwwroot\\images\\tech_geek_logo.jpg",
+      "SourceId": "GeekShoppingWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\microservices\\App\\App_Store_Microservices\\GeekShoppingWeb\\wwwroot\\",
+      "BasePath": "_content/GeekShoppingWeb",
+      "RelativePath": "images/tech_geek_logo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\tech_geek_logo.jpg"
     },
     {
       "Identity": "D:\\microservices\\App\\App_Store_Microservices\\GeekShoppingWeb\\wwwroot\\js\\site.js",

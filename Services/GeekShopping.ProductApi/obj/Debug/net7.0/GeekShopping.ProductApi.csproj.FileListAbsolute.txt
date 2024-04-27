@@ -83,6 +83,10 @@ D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bi
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.CodeDom.dll
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Net.Http.Json.dll
+D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Text.Encodings.Web.dll
+D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Text.Json.dll
+D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\GeekShopping.ProductApi.csproj.AssemblyReference.cache
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\GeekShopping.ProductApi.GeneratedMSBuildEditorConfig.editorconfig
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\GeekShopping.ProductApi.AssemblyInfoInputs.cache
@@ -105,7 +109,3 @@ D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\ob
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\GeekShopping.ProductApi.pdb
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\GeekShopping.ProductApi.genruntimeconfig.cache
 D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\obj\Debug\net7.0\ref\GeekShopping.ProductApi.dll
-D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Net.Http.Json.dll
-D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Text.Encodings.Web.dll
-D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\System.Text.Json.dll
-D:\microservices\App\App_Store_Microservices\Services\GeekShopping.ProductApi\bin\Debug\net7.0\runtimes\browser\lib\net7.0\System.Text.Encodings.Web.dll

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\microservices\\App\\App_Store_Microservices\\GeekShoppingWeb\\wwwroot\\images\\tech_geek_logo.jpg",
+      "PackagePath": "staticwebassets\\images\\tech_geek_logo.jpg"
+    },
+    {
       "Id": "D:\\microservices\\App\\App_Store_Microservices\\GeekShoppingWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

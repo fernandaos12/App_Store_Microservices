@@ -1,7 +1,5 @@
 ﻿using System.Net.Http.Headers;
 using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
 
 namespace GeekShoppingWeb.Utils
 {
@@ -16,7 +14,7 @@ namespace GeekShoppingWeb.Utils
             if (!response.IsSuccessStatusCode)
             {
                 throw
-                    new ApplicationException($"Something went wrong calling the API {response.ReasonPhrase}");
+                    new ApplicationException($"Something went wrong calling the API - {response.ReasonPhrase}");
             }
             var dataAsString = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             var retorno = JsonSerializer.Deserialize<T>(dataAsString, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });

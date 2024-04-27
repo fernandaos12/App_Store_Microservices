@@ -1,6 +1,8 @@
-﻿using GeekShoppingWeb.Models.Services.IServices;
+﻿using GeekShoppingWeb.Models;
+using GeekShoppingWeb.Models.Services.IServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace GeekShoppingWeb.Controllers
 {
@@ -25,66 +27,84 @@ namespace GeekShoppingWeb.Controllers
         }
 
         // GET: ProductController/Create
-        public ActionResult Create()
-        {
+        [HttpGet]
+        public async Task<ActionResult> ProductCreate()
+        {           
             return View();
         }
 
         // POST: ProductController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> ProductCreate(ProductModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                var reponse = await _productservice.CreateProduct(model);
+                if (reponse != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            catch
-            {
-                return View();
-            }
+            return View(model);
         }
 
-        // GET: ProductController/Edit/5
-        public ActionResult Edit(int id)
+        // GET: ProductController/ProductUpdate/5
+        [HttpGet]
+        public async Task<ActionResult> ProductUpdate(int id)
         {
-            return View();
+            var objView = await _productservice.FindProductById(id);
+            if (objView == null)
+            {
+                return NotFound();
+            }
+            return View(objView);
         }
 
-        // POST: ProductController/Edit/5
+        // POST: ProductController/ProductUpdate/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> ProductUpdate(ProductModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                var obj = await _productservice.UpdateProduct(model);
+                if (obj != null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            catch
-            {
-                return View();
-            }
+            return View(model);
         }
 
-        // GET: ProductController/Delete/5
-        public ActionResult Delete(int id)
+       // GET: ProductController/Delete/5
+        public async Task<ActionResult> ProductDelete(int? id)
         {
-            return View();
+            //var objView = await _productservice.DeleteProductById(id);
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var response = await _productservice.FindProductById(id.Value);
+
+            return View(response);
         }
 
         // POST: ProductController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        [HttpDelete()]
+        public async void ProductDelete(int id)
         {
-            try
+            var response = await _productservice.FindProductById(id);
+
+            if (response != null)
             {
-                return RedirectToAction(nameof(Index));
+                throw new ArgumentException("Error Delete item");
             }
-            catch
-            {
-                return View();
-            }
+            await _productservice.DeleteProductById(response.Id);
+
+            // return View();
+            //return true;
+
         }
     }
 }
