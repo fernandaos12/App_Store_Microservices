@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeekShopping.Test")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc9027aaa3e3af93865439b989a2a2e5b6bb189a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6fbeb1f830def3f3564393863877751acef96d7")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeekShopping.Test")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeekShopping.Test")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
