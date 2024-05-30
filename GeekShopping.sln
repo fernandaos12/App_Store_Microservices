@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShoppingWeb", "GeekShop
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{66CCDA64-36DC-4A53-8AC6-CE101FBC702E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Test", "GeekShopping.Test\GeekShopping.Test.csproj", "{5D7667BA-C923-49C3-B68B-79B0BE79B56A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Test", "GeekShopping.Test\GeekShopping.Test.csproj", "{5D7667BA-C923-49C3-B68B-79B0BE79B56A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
