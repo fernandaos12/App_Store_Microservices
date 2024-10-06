@@ -2054,11 +2054,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\GeekShopping.ProductApi.csproj",
-      "projectName": "GeekShopping.ProductApi",
-      "projectPath": "D:\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\GeekShopping.ProductApi.csproj",
+      "projectUniqueName": "D:\\Projetos\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\GeekShopping.Api.csproj",
+      "projectName": "GeekShopping.Api",
+      "projectPath": "D:\\Projetos\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\GeekShopping.Api.csproj",
       "packagesPath": "C:\\Users\\ferna\\.nuget\\packages\\",
-      "outputPath": "D:\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\obj\\",
+      "outputPath": "D:\\Projetos\\microservices\\App\\App_Store_Microservices\\Services\\GeekShopping.ProductApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2167,7 +2167,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

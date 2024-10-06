@@ -5,12 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GeekShopping.ProductApi.Model.Base
+namespace GeekShopping.Api.Model.Base
 {
     public class BaseEntity
     {
         [Key]
         [Column("Id")]
-        public long Id {get; set;}
+        public int Id {get; set;}
+        public DateTime CreatedAt { get; set; } = DateTime.Now;
     }
 }

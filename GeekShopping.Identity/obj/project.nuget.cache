@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZzzKCQm8Vmw=",
+  "dgSpecHash": "xbuHZ7sfyPg=",
   "success": true,
-  "projectFilePath": "D:\\microservices\\App\\App_Store_Microservices\\GeekShopping.Identity\\GeekShopping.Identity.csproj",
+  "projectFilePath": "D:\\Projetos\\microservices\\App\\App_Store_Microservices\\GeekShopping.Identity\\GeekShopping.Identity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferna\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\ferna\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

@@ -1,35 +1,32 @@
 ﻿using AutoMapper;
-using GeekShopping.ProductApi.Data.ValueObject;
-using GeekShopping.ProductApi.Model;
-using GeekShopping.ProductApi.Model.Context;
+using GeekShopping.Api.Model;
+using GeekShopping.Api.Model.Context;
+using GeekShopping.Api.Repository.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
-namespace GeekShopping.ProductApi.Repository
+namespace GeekShopping.Api.Repository
 {
     public class ProductRepository : IProductRepository
     {
-
         private readonly MySqlContext _context;
-        private IMapper _mapper;
 
-        public ProductRepository(MySqlContext context, IMapper mapper)
+        public ProductRepository(MySqlContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
-        public async Task<ProductVO> Create(ProductVO p)
+        public async Task<Product> Create(Product p)
         {
-            Product product = _mapper.Map<Product>(p);
-            _context.Add(product);
+            _context.Product.Add(p);
             await _context.SaveChangesAsync();
-            return _mapper.Map<ProductVO>(product);
+            return p;
         }
 
         public async Task<bool> Delete(long id)
         {
             try
             {
-                Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
+                Product product = await _context.Product.Where(p => p.Id == id).FirstOrDefaultAsync();
                 
                 if(product == null)
                 {
@@ -37,7 +34,7 @@ namespace GeekShopping.ProductApi.Repository
                 }
                 else
                 {
-                    _context.Products.Remove(product);
+                    _context.Product.Remove(product);
                     await _context.SaveChangesAsync();
                     return true;
                 }
@@ -48,24 +45,23 @@ namespace GeekShopping.ProductApi.Repository
             }
         }
 
-        public async Task<IEnumerable<ProductVO>> FindAll()
+        public async Task<IEnumerable<Product>> FindAll()
         {
-            List<Product> products = await _context.Products.ToListAsync();
-            return _mapper.Map<List<ProductVO>>(products);
+            List<Product> Product = await _context.Product.ToListAsync();
+            return Product.ToList();
         }
 
-        public async Task<ProductVO> FindById(long id)
+        public async Task<Product> FindById(long id)
         {
-            Product product = await _context.Products.Where(p => p.Id == id).FirstOrDefaultAsync();
-            return _mapper.Map<ProductVO>(product);
+            var product = await _context.Product.Where(p => p.Id == id).FirstOrDefaultAsync();            
+            return product;
         }
 
-        public async Task<ProductVO> Update(ProductVO p)
+        public async Task<Product> Update(Product p)
         {
-            Product product = _mapper.Map<Product>(p);
-            _context.Products.Update(product);
+            _context.Product.Update(p);
             await _context.SaveChangesAsync();
-            return _mapper.Map<ProductVO>(product);
+            return p;
         }
 
        

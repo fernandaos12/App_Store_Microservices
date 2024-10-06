@@ -63,8 +63,12 @@ namespace GeekShopping.Identity.Controllers
 
                 if(result.Succeeded)
                 {
-
-                    return RedirectToAction("Index", "home");
+                    var user = _userManager.FindByNameAsync(model.Email);
+                  
+                    if (user != null)
+                    {
+                        return RedirectToAction("Index", "home");
+                    }
                 }
 
                 ModelState.AddModelError(string.Empty, "Login Inválido");

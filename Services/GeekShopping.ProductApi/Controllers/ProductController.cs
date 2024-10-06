@@ -1,24 +1,31 @@
-﻿using GeekShopping.ProductApi.Data.ValueObject;
-using GeekShopping.ProductApi.Repository;
+﻿using GeekShopping.Api.Data.ObjectDTO;
+using GeekShopping.Api.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GeekShopping.ProductApi.Controllers
+namespace GeekShopping.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
-        private IProductRepository _repo;
+        private IProductService _service;
 
-        public ProductController(IProductRepository repo)
+        public ProductController(IProductService service)
         {
-            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
+            _service = service ?? throw new ArgumentNullException(nameof(service));
+        }
+
+        [HttpGet]
+        public async Task<IEnumerable<ProductDTO>> FindAll()
+        {
+            var products = await _service.GetProducts();
+            return products;
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> FindbyId(long id)
         {
-            var product = await _repo.FindById(id);
+            var product = await _service.GetProductById(id);
             if (product == null)
             {
                 return NotFound();
@@ -26,44 +33,40 @@ namespace GeekShopping.ProductApi.Controllers
             return Ok(product);
         }
 
-        [HttpGet]
-        public async Task<IEnumerable<ProductVO>> FindAll()
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] ProductDTO prod)
         {
-            var products = await _repo.FindAll();
-            return products;
+            if (prod == null)
+            {
+                return BadRequest("Erro ao adicionar produto");
+            }
+
+            await _service.AddProduct(prod);
+
+            return new CreatedAtRouteResult("FindAll", new { id = prod.Id }, prod);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(ProductVO prod)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> Update([FromBody] ProductDTO prod)
         {
             if (prod == null)
             {
                 return BadRequest();
             }
-            var product = await _repo.Create(prod);
-            return Ok(product);
+            await _service.UpdateProduct(prod);
+            return Ok(prod);
         }
 
-        [HttpPut()]
-        public async Task<IActionResult> Update(ProductVO prod)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete(int id)
         {
-            if(prod == null)
+            var prod = await _service.GetProductById(id);
+            if (prod == null)
             {
-                return BadRequest();
+                return NotFound("Product NotFound in Server");
             }
-            var product = await _repo.Update(prod);
-            return Ok(product);
-        }
-
-        [HttpDelete()]
-        public async Task<IActionResult> Delete(long id)
-        {            
-            var status = await _repo.Delete(id);
-            if(status == false)
-            {
-                return BadRequest();
-            }
-            return Ok(status);
+            await _service.DeleteProduct(id);
+            return Ok(prod);
         }
     }
 }

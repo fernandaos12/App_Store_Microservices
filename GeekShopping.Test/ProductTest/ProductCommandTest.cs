@@ -1,6 +1,6 @@
 ﻿using GeekShopping.ProductApi.Data.ValueObject;
 using GeekShopping.ProductApi.Model;
-using GeekShopping.ProductApi.Repository;
+using GeekShopping.ProductApi.Repository.Interfaces;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.DataCollection;

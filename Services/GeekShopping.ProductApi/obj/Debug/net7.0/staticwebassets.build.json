@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "pnm+agDpddzv1CLwZRmm1bw/vralYPszqPIioJ2AcUY=",
-  "Source": "GeekShopping.ProductApi",
-  "BasePath": "_content/GeekShopping.ProductApi",
+  "Hash": "4iDXL9eVvVUeTMZHn6ZDCjaRAdVx7x8td0MedRjUcWM=",
+  "Source": "GeekShopping.Api",
+  "BasePath": "_content/GeekShopping.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.ProductApi", "Services\GeekShopping.ProductApi\GeekShopping.ProductApi.csproj", "{28C8AC1A-025B-4B67-A779-22F401231070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Api", "Services\GeekShopping.ProductApi\GeekShopping.Api.csproj", "{28C8AC1A-025B-4B67-A779-22F401231070}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{6FAD75FC-D4AA-46DF-ACB8-3C05BC1A0191}"
 EndProject
@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{66CCDA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Test", "GeekShopping.Test\GeekShopping.Test.csproj", "{5D7667BA-C923-49C3-B68B-79B0BE79B56A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeekShopping.Identity", "GeekShopping.Identity\GeekShopping.Identity.csproj", "{BA9EE16E-06F0-4E39-8803-8CD7824C899E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeekShopping.Identity", "GeekShopping.Identity\GeekShopping.Identity.csproj", "{BA9EE16E-06F0-4E39-8803-8CD7824C899E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
